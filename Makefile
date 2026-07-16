@@ -1,14 +1,9 @@
-# Rootless 關鍵開關
+# 宣告 Rootless 模式
 export THEOS_PACKAGE_SCHEME = rootless
-export THEOS=/theos # 確認你的路徑正確
-export ARCHS = arm64
-export TARGET = iphone:clang:15.6:15.6 # 修改為你需要的版本
 
+# 只需要這行引用 common.mk 來獲取打包指令
 include $(THEOS)/makefiles/common.mk
 
-APPLICATION_NAME = NOC相機
-$(APPLICATION_NAME)_FILES = main.swift Core/*.swift Models/*.swift Views/*.swift
-$(APPLICATION_NAME)_FRAMEWORKS = UIKit Foundation CoreGraphics QuartzCore
-$(APPLICATION_NAME)_CFLAGS = -fobjc-arc
-
-include $(THEOS_MAKE_PATH)/application.mk
+# 這是空的，因為你不需要編譯任何東西，你只需要打包
+# 只要執行 make package，Theos 就會自動把 layout 資料夾裡的東西封裝起來
+include $(THEOS_MAKE_PATH)/package.mk
