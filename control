@@ -1,0 +1,8 @@
+Package: com.void.noccamera
+Name: NOC 相機
+Version: 1.0.0
+Section: Utilities
+Architecture: iphoneos-arm64
+Description: 這是我手刻的 NOC 相機 App
+Maintainer: VOIDNOC
+Author: NOC-VOID
